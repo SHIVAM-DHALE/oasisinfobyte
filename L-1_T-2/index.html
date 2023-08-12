@@ -1,0 +1,196 @@
+<html>
+<head>
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #333333;
+            color: white;
+            padding: 20px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            color: #ff9900;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .banner {
+            height: 500px;
+            background-image: url("https://source.unsplash.com/random/1200x500");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .banner h1 {
+            color: white;
+            font-size: 60px;
+            text-shadow: 2px 2px 4px black;
+        }
+
+        .about {
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .about p {
+            font-size: 20px;
+            line-height: 1.5;
+        }
+
+        .skills {
+            padding: 40px;
+            background-color: #333333;
+            color: white;
+        }
+
+        .skills h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .skills ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+
+        }
+
+        .skills li {
+            width: 200px;
+            height: 200px;
+            border-radius :50%;
+            border :5px solid white;
+            display :flex;
+            align-items :center;
+            justify-content :center;
+            font-size :30px;
+            font-weight :bold;
+            transition :transform 0.3s ease-in-out;
+        }
+
+        .skills li:hover {
+            transform :scale(1.1);
+            border-color :#ff9900;
+        }
+
+        .contact {
+            padding :40px;
+            background-color :#333333;
+            color :white;
+        }
+
+        .contact h2 {
+            text-align :center;
+            margin-bottom :20px;
+        }
+
+        .contact form {
+            max-width :600px;
+            margin :0 auto;
+            display :flex;
+            flex-direction :column;
+            gap :10px;
+        }
+
+        .contact form input, .contact form textarea {
+            padding :10px;
+            border-radius :5px;
+            border:none;
+            outline:none;
+        }
+        .contact form button {
+            padding :10px;
+            background-color :#ff9900;
+            color :white;
+            border :none;
+            border-radius :5px;
+            cursor :pointer;
+            font-size :20px;
+            font-weight :bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">My Portfolio</div>
+            <div class="menu">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+        <div class="banner">
+            <h1>Hi, I'm Shivam Dhale</h1>
+        </div>
+        <div id="about" class="about">
+            <img src="./Untitled design.png" alt="My photo">
+            <p>Hi, I'm Shivam Dhale, a web developer with a passion for creating beautiful and functional websites. I have experience in using HTML, CSS, JavaScript and Django to build responsive and dynamic web applications.</p>
+        </div>
+        <div id="skills" class="skills">
+            <h2>My Skills</h2>
+            <ul>
+                <li>HTML 5</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>java</li>
+            </ul>
+        </div>
+        <div id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your name">
+                <input type="email" name="email" placeholder="Your email">
+                <textarea name="message" placeholder="Your message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator</title>
+<style>
+body{
+    padding-top: 50px;
+    background-color: black;
+}
+.calci{
+    width: 50%;
+    height: 85%;
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-top: 50px;
+    gap: 10px;
+    background-color: #f4762d;
+}
+    .input_no {
+        padding: 10px;
+        padding-left: 20px;
+        display: grid;
+        grid-template-columns:  20% 20% 20% 20%  ;
+        gap : 5%;
+        width: 95%;
+        height: 160px;
+        background-color:#ffd78a ;
+    }
+    .textview{
+        margin-right: 10%;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 25px;
+        margin-bottom: 10px;
+    }
+    button{
+        background:    #12b3eb;
+    border-radius: 11px;
+    
+    color:         #ffffff;
+    display:       inline-block;
+    font:         "Open Sans", sans-serif;
+    text-align:    center;
+    }
+
+</style>
+<script>
+
+    function input(num) 
+    {
+    document.form1.textview.value = document.form1.textview.value + num;
+    }
+    function equal()
+    {
+    var exp = document.form1.textview.value;
+    if(exp)
+    {
+    document.form1.textview.value = eval(exp)
+    }
+    }
+
+    function backspace()
+    {
+    var exp = document.form1.textview.value;
+    document.form1.textview.value = exp.substring(0, exp.length - 1);
+    }
+    
+    
+    </script>
+</head>
+<body>
+
+
+<div class="calci">
+    
+    <div class="display">
+        <form name = "form1">
+            <input class= "textview" name = "textview">
+        </form>
+    </div>
+    <div class="input_no">
+        <button onclick="form1.textview.value = ' '">C</button>
+        <button onclick="backspace()"><</button>
+        <button onclick="percent()">%</button>
+        <button onclick="input('*')">*</button>
+        <button onclick="input(7)">7</button>
+        <button onclick="input(8)">8</button>
+        <button onclick="input(9)">9</button>
+        <button onclick="input('+')" >+</button>
+        <button onclick="input(4)">4</button>
+        <button onclick="input(5)">5</button>
+        <button onclick="input(6)">6</button>
+        <button onclick="input('-')">-</button>
+        <button onclick="input(1)">1</button>
+        <button onclick="input(2)">2</button>
+        <button onclick="input(3)">3</button>
+        <button onclick="input('/')">/</button>
+        <button onclick="input()"></button>
+        <button onclick="input(0)">0</button>
+        <button onclick="input('.')">.</button>
+        <button onclick="equal()">=</button>
+    </div>
+
+
+</div>
+</body>
+</html>
